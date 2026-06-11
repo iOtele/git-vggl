@@ -80,7 +80,10 @@ export default function Hero() {
         alignItems: "center",
         justifyContent: "center",
         overflow: "hidden",
-        background: "#060F1E",
+        background: "#000f13",
+      
+
+         zIndex: 30,
       }}
     >
       <canvas
@@ -90,7 +93,7 @@ export default function Hero() {
           inset: 0,
           width: "100%",
           height: "100%",
-          pointerEvents: "none",
+          pointerEvents: "stroke",
           opacity: 0.7,
         }}
       />
@@ -308,6 +311,7 @@ export default function Hero() {
               color: "white",
               lineHeight: 1.05,
               marginBottom: 8,
+              zIndex: 30,
             }}
           >
             Victoria&apos;s
@@ -320,6 +324,7 @@ export default function Hero() {
               fontWeight: 600,
               lineHeight: 1.02,
               marginBottom: 8,
+             
             }}
           >
             Global Garden

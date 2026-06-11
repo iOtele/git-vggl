@@ -34,7 +34,7 @@ export default function Contact() {
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", position: "relative" }}>
         <div className="reveal" style={{ textAlign: "center", marginBottom: 80 }}>
           <p style={{ color: "#E87722", fontSize: 11, letterSpacing: 5, textTransform: "uppercase", fontWeight: 500, marginBottom: 16 }}>Get In Touch</p>
-          <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(40px,6vw,60px)", fontWeight: 300, color: "white", marginBottom: 24 }}>Book Your Event</h2>
+          <h2 style={{ fontFamily: "var(--font-display)",fontSize: "clamp(20px,6vw,40px)", fontWeight: 300, color: "white", marginBottom: 24 }}>Book Your Event</h2>
           <div className="ornament" style={{ maxWidth: 200, margin: "0 auto" }}><span>✦</span></div>
         </div>
 

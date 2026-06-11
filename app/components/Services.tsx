@@ -167,14 +167,15 @@ export default function Services() {
           <h2
             style={{
               fontFamily: "var(--font-display)",
-              fontSize: "clamp(40px,6vw,60px)",
+              fontSize: "clamp(20px,6vw,40px)",
               fontWeight: 300,
               color: "white",
-              marginBottom: 24,
+              marginBottom: 10,
             }}
           >
             Our Services
           </h2>
+
           <div className="ornament" style={{ maxWidth: 200, margin: "0 auto" }}>
             <span>✦</span>
           </div>

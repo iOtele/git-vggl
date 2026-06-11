@@ -7,8 +7,8 @@ const packages = [
     id: "standard",
     name: "Standard",
     subtitle: "Half Day",
-    price: "₦15,000",
-    priceNote: "– ₦20,000",
+    price: "₦20,000",
+    priceNote: "– ₦25,000",
     hours: "8am – 6pm",
     bg: "linear-gradient(135deg, #1A3A6E, #0D1F3C)",
     featured: false,
@@ -140,34 +140,95 @@ function Card({
           )}
 
           <div style={{ marginBottom: "auto" }}>
-            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 11, letterSpacing: 3, textTransform: "uppercase", marginBottom: 4 }}>
+            <p
+              style={{
+                color: "rgba(255,255,255,0.6)",
+                fontSize: 11,
+                letterSpacing: 3,
+                textTransform: "uppercase",
+                marginBottom: 4,
+              }}
+            >
               {pkg.subtitle}
             </p>
-            <h3 style={{ fontFamily: "var(--font-display)", fontSize: 32, fontWeight: 600, color: "white", marginBottom: 4 }}>
+            <h3
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: 32,
+                fontWeight: 600,
+                color: "white",
+                marginBottom: 4,
+              }}
+            >
               {pkg.name}
             </h3>
-            <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 14 }}>{pkg.hours}</p>
+            <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 14 }}>
+              {pkg.hours}
+            </p>
           </div>
 
           <div style={{ margin: "24px 0" }}>
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 52, fontWeight: 300, color: "white" }}>
+            <span
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: 52,
+                fontWeight: 300,
+                color: "white",
+              }}
+            >
               {pkg.price}
             </span>
-            <span style={{ color: "rgba(255,255,255,0.6)", fontSize: 14, marginLeft: 8 }}>
+            <span
+              style={{
+                color: "rgba(255,255,255,0.6)",
+                fontSize: 14,
+                marginLeft: 8,
+              }}
+            >
               {pkg.priceNote}
             </span>
           </div>
 
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+          <ul
+            style={{
+              listStyle: "none",
+              padding: 0,
+              margin: 0,
+              display: "flex",
+              flexDirection: "column",
+              gap: 10,
+            }}
+          >
             {pkg.front.map((f) => (
-              <li key={f} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 13, color: "rgba(255,255,255,0.8)" }}>
-                <Check size={14} style={{ color: "white", marginTop: 2, flexShrink: 0 }} />
+              <li
+                key={f}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: 10,
+                  fontSize: 13,
+                  color: "rgba(255,255,255,0.8)",
+                }}
+              >
+                <Check
+                  size={14}
+                  style={{ color: "white", marginTop: 2, flexShrink: 0 }}
+                />
                 {f}
               </li>
             ))}
           </ul>
 
-          <div style={{ marginTop: 20, display: "flex", alignItems: "center", gap: 8, color: "rgba(255,255,255,0.35)", fontSize: 12 }}>
+          <div
+            style={{
+              marginTop: 20,
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              color: "rgba(255,255,255,0.35)",
+              fontSize: 12,
+            }}
+          >
             <Info size={12} />
             <span>Click to see event types</span>
           </div>
@@ -189,7 +250,18 @@ function Card({
           }}
         >
           {/* Decorative corner */}
-          <div style={{ position: "absolute", top: 0, right: 0, width: 96, height: 96, background: "rgba(232,119,34,0.05)", borderRadius: "0 20px 0 100%", pointerEvents: "none" }} />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              width: 96,
+              height: 96,
+              background: "rgba(232,119,34,0.05)",
+              borderRadius: "0 20px 0 100%",
+              pointerEvents: "none",
+            }}
+          />
 
           {/* Back-flip button — top right */}
           <button
@@ -212,23 +284,70 @@ function Card({
               transition: "background 0.2s",
               zIndex: 2,
             }}
-            onMouseEnter={e => (e.currentTarget.style.background = "rgba(232,119,34,0.25)")}
-            onMouseLeave={e => (e.currentTarget.style.background = "rgba(232,119,34,0.1)")}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.background = "rgba(232,119,34,0.25)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.background = "rgba(232,119,34,0.1)")
+            }
           >
             <RotateCcw size={14} />
           </button>
 
-          <p style={{ color: "#E87722", fontSize: 11, letterSpacing: 3, textTransform: "uppercase", marginBottom: 8 }}>
+          <p
+            style={{
+              color: "#E87722",
+              fontSize: 11,
+              letterSpacing: 3,
+              textTransform: "uppercase",
+              marginBottom: 8,
+            }}
+          >
             {pkg.name} Package
           </p>
-          <h3 style={{ fontFamily: "var(--font-display)", fontSize: 26, fontWeight: 600, color: "white", marginBottom: 24 }}>
+          <h3
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: 26,
+              fontWeight: 600,
+              color: "white",
+              marginBottom: 24,
+            }}
+          >
             Perfect for...
           </h3>
 
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 16, flex: 1 }}>
+          <ul
+            style={{
+              listStyle: "none",
+              padding: 0,
+              margin: 0,
+              display: "flex",
+              flexDirection: "column",
+              gap: 16,
+              flex: 1,
+            }}
+          >
             {pkg.back.map((d) => (
-              <li key={d} style={{ display: "flex", alignItems: "center", gap: 12, color: "rgba(192,200,216,0.7)", fontSize: 14 }}>
-                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#E87722", flexShrink: 0 }} />
+              <li
+                key={d}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                  color: "rgba(192,200,216,0.7)",
+                  fontSize: 14,
+                }}
+              >
+                <span
+                  style={{
+                    width: 6,
+                    height: 6,
+                    borderRadius: "50%",
+                    background: "#E87722",
+                    flexShrink: 0,
+                  }}
+                />
                 {d}
               </li>
             ))}
@@ -263,32 +382,76 @@ export default function RateCards() {
 
   useEffect(() => {
     const obs = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); }),
-      { threshold: 0.1 }
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add("visible");
+        }),
+      { threshold: 0.1 },
     );
     ref.current?.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
     return () => obs.disconnect();
   }, []);
 
   return (
-    <section id="rates" ref={ref} style={{ padding: "112px 0", background: "#FAF8F4" }}>
+    <section
+      id="rates"
+      ref={ref}
+      style={{ padding: "112px 0", background: "#FAF8F4" }}
+    >
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
-        <div className="reveal" style={{ textAlign: "center", marginBottom: 16 }}>
-          <p style={{ color: "#E87722", fontSize: 11, letterSpacing: 5, textTransform: "uppercase", fontWeight: 500, marginBottom: 16 }}>
+        <div
+          className="reveal"
+          style={{ textAlign: "center", marginBottom: 16 }}
+        >
+          <p
+            style={{
+              color: "#E87722",
+              fontSize: 11,
+              letterSpacing: 5,
+              textTransform: "uppercase",
+              fontWeight: 500,
+              marginBottom: 16,
+            }}
+          >
             Transparent Pricing
           </p>
-          <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(40px,6vw,60px)", fontWeight: 300, color: "#0D1F3C", marginBottom: 8 }}>
+          <h2
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "clamp(20px,6vw,40px)",
+              fontWeight: 300,
+              color: "#0D1F3C",
+              marginBottom: 8,
+            }}
+          >
             Rate Card
           </h2>
-          <p style={{ color: "rgba(13,31,60,0.5)", fontSize: 13, letterSpacing: 2 }}>
-            Click any card to explore event types it&apos;s suited for
-          </p>
-          <div className="ornament" style={{ maxWidth: 200, margin: "16px auto 0" }}>
+
+          <div
+            className="ornament"
+            style={{ maxWidth: 200, margin: "0 auto " }}
+          >
             <span>✦</span>
           </div>
+          <p
+            style={{
+              color: "rgba(13,31,60,0.5)",
+              fontSize: 13,
+              letterSpacing: 2,
+            }}
+          >
+            Click any card to explore event types it&apos;s suited for
+          </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 32, marginTop: 64 }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: 32,
+            marginTop: 64,
+          }}
+        >
           {packages.map((pkg, i) => (
             <Card
               key={pkg.id}
@@ -301,8 +464,19 @@ export default function RateCards() {
           ))}
         </div>
 
-        <p className="reveal" style={{ textAlign: "center", color: "rgba(13,31,60,0.4)", fontSize: 14, marginTop: 40 }}>
-          We can supply up to <strong style={{ color: "#E87722" }}>60 ushers per day</strong>. All rates are quoted per usher. Contact us for group or multi-day discounts.
+        <p
+          className="reveal"
+          style={{
+            textAlign: "center",
+            color: "rgba(13,31,60,0.4)",
+            fontSize: 14,
+            marginTop: 40,
+          }}
+        >
+          We can supply up to{" "}
+          <strong style={{ color: "#E87722" }}>60 ushers per day</strong>. All
+          rates are quoted per usher. Contact us for group or multi-day
+          discounts.
         </p>
       </div>
     </section>

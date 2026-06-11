@@ -6,9 +6,9 @@ import Image from "next/image";
 const links = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "Our Team", href: "#team" },
   { label: "Rates", href: "#rates" },
   { label: "Testimonials", href: "#testimonials" },
-  // { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -58,7 +58,6 @@ export default function Navbar() {
           >
             <Image src="/logo.png" alt="logo" width={60} height={600} />
           </div>
-         
         </a>
 
         {/* Desktop */}

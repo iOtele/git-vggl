@@ -10,6 +10,7 @@ const S = {
     maxWidth: 1280,
     margin: "0 auto",
     padding: "0 24px",
+    border: "2px solid rgba(13,31,60,0.05)",
   } as React.CSSProperties,
 };
 

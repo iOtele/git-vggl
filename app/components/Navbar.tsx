@@ -33,7 +33,7 @@ export default function Navbar() {
         transition: "all 0.5s",
         background: scrolled ? "rgba(13,31,60,0.92)" : "transparent",
         boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.2)" : "none",
-        padding: scrolled ? "12px 0" : "20px 0",
+        padding: scrolled ? "0px 0" : "10px 0",
       }}
     >
       <div
@@ -56,7 +56,13 @@ export default function Navbar() {
               letterSpacing: 2,
             }}
           >
-            <Image src="/logo.png" alt="logo" width={60} height={600} />
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={60}
+              height={60}
+              style={{ height: "auto", width: "auto" }}
+            />
           </div>
         </a>
 

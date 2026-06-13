@@ -72,455 +72,195 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      style={{
-        position: "relative",
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        overflow: "hidden",
-        background: "#000f13",
-      
-
-         zIndex: 30,
-      }}
+      className="relative min-h-screen flex flex-col items-start justify-center overflow-hidden bg-[#000f13] text-white py-[5px]"
     >
-      <canvas
-        ref={canvasRef}
-        style={{
-          position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
-          pointerEvents: "stroke",
-          opacity: 0.7,
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "linear-gradient(to bottom, #060F1E, rgba(13,31,60,0.8), #060F1E)",
-          pointerEvents: "none",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%,-50%)",
-          width: 600,
-          height: 600,
-          borderRadius: "50%",
-          background:
-            "radial-gradient(circle, rgba(232,119,34,0.08) 0%, transparent 70%)",
-          pointerEvents: "none",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%,-50%)",
-          width: 500,
-          height: 500,
-          borderRadius: "50%",
-          border: "1px solid rgba(192,200,216,0.1)",
-          animation: "spin 20s linear infinite",
-          pointerEvents: "none",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%,-50%)",
-          width: 380,
-          height: 380,
-          borderRadius: "50%",
-          border: "1px solid rgba(232,119,34,0.1)",
-          animation: "spin 30s linear infinite reverse",
-          pointerEvents: "none",
-        }}
-      />
-
-      <div
-        style={{
-          position: "relative",
-          zIndex: 10,
-          textAlign: "left",
-          padding: "0 24px",
-          maxWidth: 700,
-          margin: "0 auto 0 24px",
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            right: 24,
-            transform: "translateY(-50%)",
-            width: 320,
-            height: 440,
-            borderRadius: 28,
-            padding: 16,
-            background: "rgba(255,255,255,0.06)",
-            border: "1px solid rgba(232,119,34,0.12)",
-            boxShadow: "0 40px 120px rgba(0,0,0,0.18)",
-            backdropFilter: "blur(16px)",
-            display: "grid",
-            placeItems: "center",
-          }}
-        >
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              borderRadius: 22,
-              overflow: "hidden",
-              background: "linear-gradient(180deg, #1A2F5A 0%, #0D1F3C 100%)",
-              position: "relative",
-              boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)",
-            }}
-          >
+      <div className="max-w-full px-6">
+        <div className="hidden md:grid absolute top-1/2 -translate-y-1/2 right-6 w-[320px] max-w-[calc(100vw-48px)] h-[350px] rounded-[20px] p-4 bg-white/5 border border-orange-500/20 shadow-[0_40px_120px_rgba(0,0,0,0.18)] backdrop-blur-xl place-items-center z-50">
+          <div className="relative w-full h-full overflow-hidden rounded-[22px] bg-gradient-to-b from-[#1A2F5A] to-[#0D1F3C] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]">
             <div
+              className="absolute inset-0"
               style={{
-                position: "absolute",
-                inset: 0,
                 background:
                   "radial-gradient(circle at 30% 20%, rgba(232,119,34,0.18), transparent 20%), radial-gradient(circle at 80% 80%, rgba(192,200,216,0.12), transparent 18%)",
               }}
             />
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                display: "flex",
-                alignItems: "flex-end",
-                justifyContent: "flex-start",
-                padding: 24,
-                color: "rgba(255,255,255,0.88)",
-                fontSize: 14,
-                lineHeight: 1.5,
-                fontFamily: "var(--font-display)",
-              }}
-            >
+            <div className="hidden md:flex absolute inset-0 items-end justify-start p-6 text-[rgba(255,255,255,0.88)] text-sm leading-[1.5] font-display">
               <div>
-                <div
-                  style={{
-                    fontSize: 11,
-                    letterSpacing: 2,
-                    textTransform: "uppercase",
-                    color: "rgba(255,255,255,0.5)",
-                    marginBottom: 8,
-                  }}
-                >
+                <div className="text-[11px] uppercase tracking-[2px] text-white/50 mb-2">
                   Featured Event
                 </div>
-                <div style={{ fontSize: 18, fontWeight: 600 }}>
-                  Scene in Focus
-                </div>
+                <div className="text-[18px] font-semibold">Scene in Focus</div>
               </div>
             </div>
           </div>
-          <div
-            style={{
-              position: "absolute",
-              top: 16,
-              left: 16,
-              width: 70,
-              height: 70,
-              borderRadius: 18,
-              border: "1px solid rgba(255,255,255,0.12)",
-              boxShadow: "0 15px 35px rgba(0,0,0,0.18)",
-              background: "rgba(255,255,255,0.04)",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              bottom: 16,
-              right: 16,
-              width: 80,
-              height: 80,
-              borderRadius: 18,
-              border: "1px solid rgba(255,255,255,0.12)",
-              background: "rgba(232,119,34,0.06)",
-            }}
-          />
+          <div className="absolute top-4 left-4 w-17.5 h-17.5 rounded-[18px] border border-white/12 shadow-[0_15px_35px_rgba(0,0,0,0.18)] bg-white/5" />
+          <div className="absolute bottom-4 right-4 w-[80px] h-[80px] rounded-[18px] border border-white/12 bg-orange-500/10" />
         </div>
 
+        <canvas
+          ref={canvasRef}
+          className="absolute inset-0 w-full h-full opacity-70"
+          style={{ pointerEvents: "stroke" }}
+        />
         <div
+          className="absolute inset-0 pointer-events-none"
           style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 12,
-            marginBottom: 32,
-            animation: "fadeUp 0.6s ease forwards",
-            opacity: 0,
+            background:
+              "linear-gradient(to bottom, #060F1E, rgba(13,31,60,0.8), #060F1E)",
           }}
-        >
-          <span
-            style={{
-              height: 1,
-              width: 40,
-              background: "#E87722",
-              display: "block",
-            }}
-          />
-          <span
-            style={{
-              fontSize: 11,
-              color: "#E87722",
-              letterSpacing: 5,
-              textTransform: "uppercase",
-              fontWeight: 500,
-            }}
-          >
-            Lagos · Abuja · Kaduna
-          </span>
-          <span
-            style={{
-              height: 1,
-              width: 40,
-              background: "#E87722",
-              display: "block",
-            }}
-          />
-        </div>
-
-        <h1
-          style={{
-            fontFamily: "var(--font-display)",
-            marginBottom: 24,
-            animation: "fadeUp 0.8s 0.15s ease forwards",
-            opacity: 0,
-            maxWidth: 680,
-          }}
-        >
-          <span
-            style={{
-              display: "block",
-              fontSize: "clamp(48px,10vw,96px)",
-              fontWeight: 300,
-              color: "white",
-              lineHeight: 1.05,
-              marginBottom: 8,
-              zIndex: 30,
-            }}
-          >
-            Victoria&apos;s
-          </span>
-          <span
-            className="shimmer-text"
-            style={{
-              display: "block",
-              fontSize: "clamp(36px,7vw,72px)",
-              fontWeight: 600,
-              lineHeight: 1.02,
-              marginBottom: 8,
-             
-            }}
-          >
-            Global Garden
-          </span>
-          <span
-            style={{
-              display: "block",
-              fontSize: "clamp(48px,10vw,96px)",
-              fontWeight: 300,
-              color: "white",
-              lineHeight: 1.05,
-            }}
-          >
-            Limited
-          </span>
-        </h1>
-
-        <p
-          style={{
-            fontFamily: "var(--font-display)",
-            fontStyle: "italic",
-            color: "#C0C8D8",
-            fontSize: "clamp(18px,3vw,24px)",
-            marginBottom: 16,
-            fontWeight: 300,
-            animation: "fadeUp 0.8s 0.3s ease forwards",
-            opacity: 0,
-          }}
-        >
-          &ldquo;Creating Beautiful Experiences&rdquo;
-        </p>
-
-        <p
-          style={{
-            color: "rgba(255,255,255,0.82)",
-            fontSize: "clamp(16px,2vw,20px)",
-            maxWidth: 680,
-            margin: "0 0 32px 0",
-            lineHeight: 1.75,
-            animation: "fadeUp 0.8s 0.45s ease forwards",
-            opacity: 0,
-            whiteSpace: "pre-line",
-          }}
-        >
-          We match premium ushers, talent and event support to every production
-          — from intimate brand experiences to full-scale ceremonies across
-          Lagos, Abuja and Kaduna.
-        </p>
-
+        />
         <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "flex-start",
-            gap: 12,
-            marginBottom: 48,
-            animation: "fadeUp 0.8s 0.45s ease forwards",
-            opacity: 0,
+            width: "min(600px,80vw)",
+            height: "min(600px,80vw)",
+            background:
+              "radial-gradient(circle, rgba(232,119,34,0.08) 0%, transparent 70%)",
           }}
-        >
-          {["Models", "Ushers", "Actors"].map((s) => (
-            <span
-              key={s}
-              style={{
-                padding: "6px 20px",
-                borderRadius: 999,
-                fontSize: 11,
-                letterSpacing: 3,
-                textTransform: "uppercase",
-                fontWeight: 500,
-                border: "1px solid rgba(192,200,216,0.3)",
-                color: "rgba(192,200,216,0.8)",
-              }}
-            >
-              {s}
+        />
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
+          style={{
+            width: "min(500px,70vw)",
+            height: "min(500px,70vw)",
+            border: "1px solid rgba(192,200,216,0.1)",
+            animation: "spin 20s linear infinite",
+          }}
+        />
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
+          style={{
+            width: "min(380px,55vw)",
+            height: "min(380px,55vw)",
+            border: "4px solid rgba(232,119,34,0.1)",
+            animation: "spin 30s linear infinite reverse",
+          }}
+        />
+
+        <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col text-center md:text-left md:items-left justify-center h-full px-28">
+          <div
+            className="inline-flex items-center gap-2.5 mb-7 opacity-100"
+            style={{ animation: "fadeUp 0.6s ease forwards" }}
+          >
+            <span className="block h-px w-10 bg-[#E87722]" />
+            <span className="text-[11px] uppercase tracking-[5px] font-semibold text-[#E87722]">
+              Lagos · Abuja · Kaduna
             </span>
-          ))}
-        </div>
+            <span className="block h-px w-10 bg-[#E87722]" />
+          </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 16,
-            justifyContent: "flex-start",
-            animation: "fadeUp 0.8s 0.6s ease forwards",
-            opacity: 0,
-          }}
-        >
-          <a
-            href="#contact"
-            className="btn-pulse"
-            style={{
-              padding: "14px 32px",
-              background: "#E87722",
-              color: "white",
-              fontWeight: 600,
-              borderRadius: 999,
-              textDecoration: "none",
-              fontSize: 12,
-              letterSpacing: 2,
-              textTransform: "uppercase",
-            }}
+          <h1
+            className="font-display mb-6 opacity-100 max-w-1500 text-left"
+            style={{ animation: "fadeUp 0.8s 0.15s ease forwards" }}
           >
-            Book Your Event
-          </a>
-          <a
-            href="#rates"
-            style={{
-              padding: "14px 32px",
-              border: "1px solid rgba(192,200,216,0.4)",
-              color: "#C0C8D8",
-              borderRadius: 999,
-              textDecoration: "none",
-              fontSize: 12,
-              letterSpacing: 2,
-              textTransform: "uppercase",
-            }}
-          >
-            View Rate Card
-          </a>
-        </div>
-      </div>
-
-      <a
-        href="#about"
-        style={{
-          position: "absolute",
-          bottom: 80,
-          left: "50%",
-          transform: "translateX(-50%)",
-          color: "rgba(192,200,216,0.5)",
-          animation: "fadeIn 1s 1s ease forwards, bounce 2s infinite",
-          opacity: 0,
-          textDecoration: "none",
-        }}
-      >
-        <ChevronDown size={28} />
-      </a>
-
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          background: "rgba(13,31,60,0.8)",
-          borderTop: "1px solid rgba(255,255,255,0.05)",
-          animation: "fadeIn 1s 0.9s ease forwards",
-          opacity: 0,
-        }}
-      >
-        <div
-          style={{
-            maxWidth: 700,
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "repeat(3,1fr)",
-          }}
-        >
-          {[
-            { n: "9+", label: "Years of Excellence" },
-            { n: "60+", label: "Ushers Per Event" },
-            { n: "3", label: "Cities Nationwide" },
-          ].map((stat, i) => (
-            <div
-              key={stat.label}
-              style={{
-                padding: "20px 0",
-                textAlign: "center",
-                borderRight: i < 2 ? "1px solid rgba(255,255,255,0.1)" : "none",
-              }}
+            <span
+              className="block font-light text-white leading-[1.05] mb-2 z-30"
+              style={{ fontSize: "clamp(38px,8vw,48px)" }}
             >
-              <div
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: 26,
-                  fontWeight: 600,
-                  color: "#E87722",
-                }}
+              Victoria&apos;s
+            </span>
+            <span
+              className="shimmer-text block font-semibold text-white leading-[1.02] mb-2"
+              style={{ fontSize: "clamp(30px,7vw,68px)" }}
+            >
+              Global Garden
+            </span>
+            <span
+              className="block font-light text-white leading-[1.05] mb-2 "
+              style={{ fontSize: "clamp(38px,8vw,56px)" }}
+            >
+              Limited
+            </span>
+          </h1>
+
+          <p
+            className="font-display italic text-[#C0C8D8]  mb-4 font-light opacity-60"
+            style={{
+              fontSize: "clamp(14px,3vw,20px)",
+              animation: "fadeUp 0.8s 0.3s ease forwards",
+            }}
+          >
+            &ldquo;Creating Beautiful Experiences&rdquo;
+          </p>
+
+          <p
+            className="text-white/80 mb-8 max-w-[600px] leading-[1.75] whitespace-pre-line opacity-100"
+            style={{
+              fontSize: "clamp(12px,2vw,16px)",
+              animation: "fadeUp 0.8s 0.45s ease forwards",
+            }}
+          >
+            We match premium ushers, talent and event support to every
+            production from intimate brand experiences to full-scale ceremonies
+            across Lagos, Abuja and Kaduna.
+          </p>
+
+          <div
+            className="flex flex-wrap justify-start gap-3 mb-10 opacity-100"
+            style={{ animation: "fadeUp 0.8s 0.45s ease forwards" }}
+          >
+            {["Models", "Ushers", "Actors"].map((s) => (
+              <span
+                key={s}
+                className="px-5 py-1.5 rounded-full text-[10px] uppercase tracking-[1px] font-light border border-white/30 text-white/70"
               >
-                {stat.n}
-              </div>
+                {s}
+              </span>
+            ))}
+          </div>
+
+          <div
+            className="flex flex-wrap gap-3 justify-start opacity-100"
+            style={{ animation: "fadeUp 0.8s 0.6s ease forwards" }}
+          >
+            <a
+              href="#contact"
+              className="btn-pulse inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#E87722] text-white font-normal text-[12px] uppercase tracking-[1px] no-underline"
+            >
+              Book Your Event
+            </a>
+            <a
+              href="#rates"
+              className="inline-flex items-center justify-center px-5 py-2 rounded-full border border-white/40 text-[#C0C8D8] font-normal text-[12px] uppercase tracking-[1px] no-underline"
+            >
+              View Rate Card
+            </a>
+          </div>
+        </div>
+
+        <a
+          href="#about"
+          className="absolute bottom-20 left-1/2 -translate-x-1/2 text-white/50 opacity-0 no-underline"
+          style={{
+            animation: "fadeIn 1s 1s ease forwards, bounce 2s infinite",
+          }}
+        >
+          <ChevronDown size={28} />
+        </a>
+
+        <div
+          className="absolute bottom-0 left-0 right-0 bg-[#0d1f3c]/80 border-t border-white/5 opacity-0"
+          style={{ animation: "fadeIn 1s 0.9s ease forwards" }}
+        >
+          <div className="max-w-3xl mx-auto grid gap-3 grid-cols-1 sm:grid-cols-3 py-3 px-4">
+            {[
+              { n: "9+", label: "Years of Excellence" },
+              { n: "60+", label: "Ushers Per Event" },
+              { n: "3", label: "Cities Nationwide" },
+            ].map((stat, i) => (
               <div
-                style={{
-                  fontSize: 10,
-                  color: "rgba(192,200,216,0.6)",
-                  letterSpacing: 2,
-                  textTransform: "uppercase",
-                  marginTop: 4,
-                }}
+                key={stat.label}
+                className={`py-2 text-center ${i < 2 ? "border-r border-white/10 sm:border-r" : ""}`}
               >
-                {stat.label}
+                <div className="font-display text-[26px] font-semibold text-[#E87722]">
+                  {stat.n}
+                </div>
+                <div className="text-[10px] uppercase tracking-[1px] text-white/60">
+                  {stat.label}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

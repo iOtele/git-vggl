@@ -144,13 +144,47 @@ export default function OurTeam() {
                   .map((n) => n[0])
                   .slice(0, 2)
                   .join("")} */}
-                <Image
+                {/* <Image
                   src={`/${m.img}`}
                   alt={m.name}
                   width={60}
                   height={60}
-                  style={{ borderRadius: "50%" }}
-                />
+                  style={{ borderRadius: "50%" , width: "auto", height: "auto" }}
+                /> */}
+
+                {m.img ? (
+                  <Image
+                    src={`/${m.img}`}
+                    alt={m.name}
+                    width={60}
+                    height={60}
+                    style={{
+                      borderRadius: "50%",
+                      width: "auto",
+                      height: "auto",
+                    }}
+                  />
+                ) : (
+                  <div
+                    style={{
+                      width: 60,
+                      height: 60,
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      backgroundColor: "#e5e7eb",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {m.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .slice(0, 2)
+                      .join("")
+                      .toUpperCase()}
+                  </div>
+                )}
               </div>
               <h3
                 style={{

@@ -31,13 +31,18 @@ const team = [
 ];
 
 const gallery = [
-  { name: "Annie", role: "Lead Usher", color: "#1A3A6E", img: "annie.jpg" },
-  { name: "Chi", role: "Guest Liaison", color: "#E87722", img: "chi.jpg" },
   {
     name: "Emmanuella",
-    role: "Floor Manager",
+    role: "Lead Usher",
     color: "#0D1F3C",
     img: "emmanuella.jpg",
+  },
+  { name: "Chi", role: "Guest Liaison", color: "#E87722", img: "chi.jpg" },
+  {
+    name: "Annie",
+    role: "Floor Manager",
+    color: "#1A3A6E",
+    img: "annie.jpg",
   },
   { name: "Peace", role: "VIP Host", color: "#3A3A3A", img: "peace.jpg" },
   {

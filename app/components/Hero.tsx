@@ -139,10 +139,10 @@ export default function Hero() {
 
         <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col md:text-left md:items-left justify-center h-full md:px-28">
           <div
-            className="inline-flex items-center gap-2.5 mb-7 opacity-100"
+            className="inline-flex items-center gap-2.5 mb-7 justify-content opacity-100"
             style={{ animation: "fadeUp 0.6s ease forwards" }}
           >
-            <span className="block h-px w-8 bg-[#E87722]" />
+            <span className="block  h-px w-8 bg-[#E87722]" />
             <span className="text-[9px] sm:text-[11px] uppercase tracking-[5px] font-semibold text-[#E87722]">
               Lagos · Abuja · Kaduna
             </span>
@@ -239,10 +239,10 @@ export default function Hero() {
         </a>
 
         <div
-          className="absolute bottom-0 left-0 right-0 bg-[#0d1f3c]/80 border-t border-white/5 opacity-0"
+          className="absolute bottom-0 left-0 right-0 bg-[#0d1f3c]/80 border-t border-white/5 opacity-100"
           style={{ animation: "fadeIn 1s 0.9s ease forwards" }}
         >
-          <div className="max-w-3xl mx-auto grid gap-3 grid-cols-1 sm:grid-cols-3 py-3 px-4">
+          <div className="max-w-3xl mx-auto grid gap-3 grid-cols-3 sm:grid-cols-3 py-3 px-4">
             {[
               { n: "9+", label: "Years of Excellence" },
               { n: "60+", label: "Ushers Per Event" },
@@ -252,10 +252,10 @@ export default function Hero() {
                 key={stat.label}
                 className={`py-2 text-center ${i < 2 ? "border-r border-white/10 sm:border-r" : ""}`}
               >
-                <div className="font-display text-[26px] font-semibold text-[#E87722]">
+                <div className="font-display text-xl sm:text-[26px] font-semibold text-[#E87722]">
                   {stat.n}
                 </div>
-                <div className="text-[10px] uppercase tracking-[1px] text-white/60">
+                <div className="text-[10px] sm:text-xs uppercase text-wrap tracking-[1px] text-white/60">
                   {stat.label}
                 </div>
               </div>

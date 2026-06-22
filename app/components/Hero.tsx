@@ -137,7 +137,7 @@ export default function Hero() {
           }}
         />
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col text-center md:text-left md:items-left justify-center h-full px-28">
+        <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col md:text-left md:items-left justify-center h-full md:px-28">
           <div
             className="inline-flex items-center gap-2.5 mb-7 opacity-100"
             style={{ animation: "fadeUp 0.6s ease forwards" }}

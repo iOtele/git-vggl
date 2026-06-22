@@ -72,11 +72,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-start justify-center overflow-hidden bg-[#000f13] text-white py-[5px]"
+      className="relative min-h-screen flex flex-col items-start justify-center overflow-hidden bg-[#000f13] text-white py-1.25"
     >
       <div className="max-w-full px-6">
-        <div className="hidden md:grid absolute top-1/2 -translate-y-1/2 right-6 w-[320px] max-w-[calc(100vw-48px)] h-[350px] rounded-[20px] p-4 bg-white/5 border border-orange-500/20 shadow-[0_40px_120px_rgba(0,0,0,0.18)] backdrop-blur-xl place-items-center z-50">
-          <div className="relative w-full h-full overflow-hidden rounded-[22px] bg-gradient-to-b from-[#1A2F5A] to-[#0D1F3C] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]">
+        <div className="hidden md:grid absolute top-1/2 -translate-y-1/2 right-6 w-[320px] max-w-[calc(100vw-48px)] h-88 rounded-[20px] p-4 bg-white/5 border border-orange-500/20 shadow-[0_40px_120px_rgba(0,0,0,0.18)] backdrop-blur-xl place-items-center z-50">
+          <div className="relative w-full h-full overflow-hidden rounded-[22px] bg-linear-to-b from-[#1A2F5A] to-[#0D1F3C] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]">
             <div
               className="absolute inset-0"
               style={{
@@ -84,7 +84,7 @@ export default function Hero() {
                   "radial-gradient(circle at 30% 20%, rgba(232,119,34,0.18), transparent 20%), radial-gradient(circle at 80% 80%, rgba(192,200,216,0.12), transparent 18%)",
               }}
             />
-            <div className="hidden md:flex absolute inset-0 items-end justify-start p-6 text-[rgba(255,255,255,0.88)] text-sm leading-[1.5] font-display">
+            <div className="hidden md:flex absolute inset-0 items-end justify-start p-6 text-[rgba(255,255,255,0.88)] text-sm leading-normal font-display">
               <div>
                 <div className="text-[11px] uppercase tracking-[2px] text-white/50 mb-2">
                   Featured Event
@@ -94,7 +94,7 @@ export default function Hero() {
             </div>
           </div>
           <div className="absolute top-4 left-4 w-17.5 h-17.5 rounded-[18px] border border-white/12 shadow-[0_15px_35px_rgba(0,0,0,0.18)] bg-white/5" />
-          <div className="absolute bottom-4 right-4 w-[80px] h-[80px] rounded-[18px] border border-white/12 bg-orange-500/10" />
+          <div className="absolute bottom-4 right-4 w-20 h-20 rounded-[18px] border border-white/12 bg-orange-500/10" />
         </div>
 
         <canvas
@@ -142,11 +142,11 @@ export default function Hero() {
             className="inline-flex items-center gap-2.5 mb-7 opacity-100"
             style={{ animation: "fadeUp 0.6s ease forwards" }}
           >
-            <span className="block h-px w-10 bg-[#E87722]" />
-            <span className="text-[11px] uppercase tracking-[5px] font-semibold text-[#E87722]">
+            <span className="block h-px w-8 bg-[#E87722]" />
+            <span className="text-[9px] sm:text-[11px] uppercase tracking-[5px] font-semibold text-[#E87722]">
               Lagos · Abuja · Kaduna
             </span>
-            <span className="block h-px w-10 bg-[#E87722]" />
+            <span className="block h-px w-8 bg-[#E87722]" />
           </div>
 
           <h1
@@ -184,7 +184,7 @@ export default function Hero() {
           </p>
 
           <p
-            className="text-white/80 mb-8 max-w-[600px] leading-[1.75] whitespace-pre-line opacity-100"
+            className="text-white/80 mb-8 max-w-150 leading-[1.75] whitespace-pre-line opacity-100"
             style={{
               fontSize: "clamp(12px,2vw,16px)",
               animation: "fadeUp 0.8s 0.45s ease forwards",

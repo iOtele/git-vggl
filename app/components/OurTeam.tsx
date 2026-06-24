@@ -17,10 +17,10 @@ const team = [
     img: "grace.jpeg",
   },
   {
-    name: "Chinazom Danjuma",
+    name: "  Emmanuella",
     role: "Head of Talent",
     bio: "Leads casting, training and talent development.",
-    img: "danjuma.jpeg",
+    img: "    emmanuella.jpg",
   },
   {
     name: "Kelvin Adebisi",
@@ -32,12 +32,17 @@ const team = [
 
 const gallery = [
   {
-    name: "Emmanuella",
-    role: "Lead Usher",
+    name: "Chinazom Danjuma. ",
+    role: "Team Lead 1",
     color: "#0D1F3C",
-    img: "emmanuella.jpg",
+    img: "danjuma.jpeg",
   },
-  { name: "Chi", role: "Guest Liaison", color: "#E87722", img: "chi.jpg" },
+  {
+    name: "Victoria",
+    role: "Team Lead 2",
+    color: "#C45E0F",
+    img: "victoria_usher.jpeg",
+  },
   {
     name: "Annie",
     role: "Floor Manager",
@@ -52,10 +57,10 @@ const gallery = [
     img: "motunrayo.jpg",
   },
   {
-    name: "Oluwatosin",
-    role: "Welcome Team",
-    color: "#C45E0F",
-    img: "oluwatosin.jpg",
+    name: "Chi",
+    role: "Guest Liaison",
+    color: "#E87722",
+    img: "chi.jpg",
   },
   {
     name: "Jessica",

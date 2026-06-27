@@ -49,7 +49,7 @@ const gallery = [
     color: "#1A3A6E",
     img: "annie.jpg",
   },
-  { name: "Peace", role: "VIP Host", color: "#3A3A3A", img: "peace.jpg" },
+  // { name: "Peace", role: "VIP Host", color: "#3A3A3A", img: "peace.jpg" },
   {
     name: "Motunrayo",
     role: "Crowd Control",

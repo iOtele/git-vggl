@@ -14,23 +14,29 @@ const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
+const initialFormState = {
+  name: "",
+  email: "",
+  phone: "",
+  eventType: "",
+  date: "",
+  ushers: "",
+  message: "",
+};
+
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle",
   );
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    eventType: "",
-    date: "",
-    ushers: "",
-    message: "",
-  });
+  const [form, setForm] = useState(initialFormState);
 
   useEffect(() => {
+    if (EMAILJS_PUBLIC_KEY) {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+    }
+
     const obs = new IntersectionObserver(
       (entries) =>
         entries.forEach((e) => {
@@ -57,23 +63,21 @@ export default function Contact() {
       return;
     }
 
+    const formElement = formRef.current;
+    if (!formElement) {
+      setStatus("error");
+      return;
+    }
+
     try {
       await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        formRef.current!,
+        formElement,
         EMAILJS_PUBLIC_KEY,
       );
       setStatus("sent");
-      setForm({
-        name: "name",
-        email: "email",
-        phone: "phone",
-        eventType: "eventType",
-        date: "date",
-        ushers: "ushers",
-        message: "message",
-      });
+      setForm(initialFormState);
     } catch {
       setStatus("error");
     }
@@ -495,7 +499,8 @@ export default function Contact() {
                 {status === "error" && (
                   <p style={{ color: "#f87171", fontSize: 14 }}>
                     Something went wrong. Please make sure the EmailJS
-                    environment variables are configured correctly.
+                    environment variables are configured correctly and that the
+                    app has been restarted after adding them.
                   </p>
                 )}
                 <button

@@ -21,13 +21,13 @@ export default function Contact() {
     "idle",
   );
   const [form, setForm] = useState({
-    name: "name",
-    email: "email",
-    phone: "phone",
-    eventType: "eventType",
-    date: "date",
-    ushers: "ushers",
-    message: "message",
+    name: "",
+    email: "",
+    phone: "",
+    eventType: "",
+    date: "",
+    ushers: "",
+    message: "",
   });
 
   useEffect(() => {

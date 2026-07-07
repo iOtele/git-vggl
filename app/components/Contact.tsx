@@ -24,6 +24,12 @@ const initialFormState = {
   message: "",
 };
 
+console.log({
+  SERVICE: EMAILJS_SERVICE_ID,
+  TEMPLATE: EMAILJS_TEMPLATE_ID,
+  PUBLIC: EMAILJS_PUBLIC_KEY,
+});
+
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -78,7 +84,8 @@ export default function Contact() {
       );
       setStatus("sent");
       setForm(initialFormState);
-    } catch {
+    } catch (error) {
+      console.error(error);
       setStatus("error");
     }
   };
